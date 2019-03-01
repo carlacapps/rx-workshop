@@ -8,16 +8,18 @@
   "author": "justin@cix.io",
   "license": "MIT",
   "scripts": {
-    "0": "node ./00-hello-world.js",
-    "1": "node ./01-basic-array.js",
-    "2": "node ./02-rx-conversion.js",
-    "3": "node ./03-rx-basic-anatomy.js",
-    "4": "node ./04-rx-create-method.js",
-    "5": "node ./05-rx-complete-anatomy.js",
-    "6": "node ./06-rx-async.js",
-    "7": "node ./07-rx-async-improved.js",
-    "8": "node ./08-rx-async-pipelines.js",
-    "9": "node ./09-rx-flatten-observables.js"
+    "00": "node ./00-hello-world.js",
+    "01": "node ./01-basic-array.js",
+    "02": "node ./02-rx-conversion.js",
+    "03": "node ./03-rx-basic-anatomy.js",
+    "04": "node ./04-rx-create-method.js",
+    "05": "node ./05-rx-complex-anatomy.js",
+    "06": "node ./06-rx-async.js",
+    "07": "node ./07-rx-async-improved.js",
+    "08": "node ./08-rx-async-pipeline.js",
+    "09": "node ./09-rx-flatten-observables.js",
+    "10": "node ./09-rx-exported-functions.js",
+    "11": "node ./09-rx-user-testing.js"
   },
   "dependencies": {
     "rxjs": "^5.4.2",
