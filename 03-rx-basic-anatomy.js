@@ -1,6 +1,13 @@
+var Rx = require('rxjs');
+
+// Subject
 var names = [ 'Sarah Smith', 'Adam Scott', 'Eve Livingston'];
 
-var usersObj = names.map(function (name) {
+// Observer
+var users$ = Rx.Observable.from(names);
+
+// Pipeline
+var userPipeline$ = users$.map(function (name) {
 		var nameArr = name.split(' ');
 		return {
 			firstName: nameArr[0],
@@ -16,4 +23,9 @@ var usersObj = names.map(function (name) {
 		return previous;
 	}, {});
 
-console.log(usersObj);
+// Subscription (WAT! You never mentioned this!)
+userPipeline$.subscribe(
+	function (data) {
+		console.log(data);
+	}
+)

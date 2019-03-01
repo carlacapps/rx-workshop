@@ -1,13 +1,11 @@
-var Rx = require('rx');
+var Rx = require('rxjs');
 
-// Source
+// Subject
 var names = [ 'Sarah Smith', 'Adam Scott', 'Eve Livingston'];
 
-// Creation method `from`
-var usersObj$ = Rx.Observable.from(names);
-
-// Sequence of instance methods `map` and `reduce`
-usersObj$.map(function (name) {
+// Pipeline
+var usersObj = Rx.Observable.from(names)
+	.map(function (name) {
 		var nameArr = name.split(' ');
 		return {
 			firstName: nameArr[0],
@@ -23,9 +21,5 @@ usersObj$.map(function (name) {
 		return previous;
 	}, {});
 
-// Subscription (execution) method
-usersObj$.subscribe(
-	function onNext(data) {
-		console.log(data);
-	}
-)
+// Oops! Doesn't work!!
+console.log(usersObj);
