@@ -2,6 +2,11 @@
 var names = [ 'Sarah Smith', 'Adam Scott', 'Eve Livingston'];
 
 // Pipeline
+/**
+ * Instructions:
+ * Produce an array of objects with keys firstName, lastName and userName
+ * from the above array.
+ */
 var usersPipeline = names.map(function (name) {
 		/**
 		 * return { firstName: result[0], lastName: result[1] }
@@ -13,9 +18,9 @@ var usersPipeline = names.map(function (name) {
 		 */
 	});
 
-	/**
-	 * Why TWO maps? Good question!
-	 */
+/**
+ * Why TWO maps? Good question!
+ */
 
 /**
  * Want more of a challenge? Use a `reduce()` and create a user object, rather than a collection
