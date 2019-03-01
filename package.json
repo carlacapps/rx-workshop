@@ -18,8 +18,8 @@
     "07": "node ./07-rx-async-improved.js",
     "08": "node ./08-rx-async-pipeline.js",
     "09": "node ./09-rx-flatten-observables.js",
-    "10": "node ./09-rx-exported-functions.js",
-    "11": "node ./09-rx-user-testing.js"
+    "10": "node ./10-rx-exported-functions.js",
+    "11": "node ./11-rx-user-testing.js"
   },
   "dependencies": {
     "rxjs": "^5.4.2",
