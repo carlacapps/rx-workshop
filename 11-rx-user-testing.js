@@ -18,6 +18,8 @@ test('Test methods of user module', function (t) {
 	 * 4. Using the `mockTodos` above, feed the collection into the filter function for
 	 *    incomplete todos
 	 * 5. Test the output of that function against the `mockIncompleteTodos`
+	 *
+	 * Note: comment out the console in 10-rx-exported-functions.js to reduce log noise.
 	 */
 
 	t.deepEqual(leopoldoResult, mockLeopoldo, 'The `find` logic was able to find Leopoldo!');
