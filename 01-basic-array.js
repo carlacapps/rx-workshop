@@ -2,20 +2,15 @@
 var names = [ 'Sarah Smith', 'Adam Scott', 'Eve Livingston'];
 
 // Pipeline
-var usersObj = names.map(function (name) {
-		var nameArr = name.split(' ');
-		return {
-			firstName: nameArr[0],
-			lastName: nameArr[1]
-		}
+var usersPipeline = names.map(function (name) {
+		/*
+		 * return { firstName: result[0], lastName: result[1] }
+		*/
 	})
 	.map(function (user) {
-		var userKey = user.firstName.toLowerCase() + user.lastName;
-		return Object.assign(user, { key: userKey });
-	})
-	.reduce(function (previous, next) {
-		previous[next.key] = next;
-		return previous;
-	}, {});
+		/*
+		 * return { firstName: "John", lastName: "Doe", userName: "johnDoe" }
+		 */
+	});
 
-console.log(usersObj);
+console.log(usersPipeline);
