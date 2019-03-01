@@ -20,7 +20,7 @@ test('Test methods of user module', function (t) {
 	 * 5. Test the output of that function against the `mockIncompleteTodos`
 	 */
 
-	t.deepEqual(loepoldoResult, mockLeopoldo, 'The `find` logic was able to find Leopoldo!');
+	t.deepEqual(leopoldoResult, mockLeopoldo, 'The `find` logic was able to find Leopoldo!');
 	t.deepEqual(todoFilterResult, mockIncompleteTodos, 'The filter was able to remove the completed todos!')
 	t.end();
 });
