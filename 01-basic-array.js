@@ -1,5 +1,5 @@
 // Subject
-var names = [ 'Sarah Smith', 'Adam Scott', 'Eve Livingston'];
+var names = [ 'Sarah Smith', 'Adam Scott', 'Eve Livingston' ];
 
 // Pipeline
 /**
