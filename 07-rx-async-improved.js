@@ -1,13 +1,23 @@
 var request = require('superagent');
 var Rx = require('rxjs');
 
-/**
- * Instructions:
- * Let's improve our data handling!
- *
- * 1. Copy and paste the previous code here
- * 2. Convert the `fromPromise` to a `create`
- * 3. You will have to use the `.then()` method on the request function
- * 4. Call the observer methods in the `then` call.
- * 5. Console lot the result. Same output?
- */
+var todos$ = Rx.Observable.create(function (observer) {
+	request
+		.get('https://jsonplaceholder.typicode.com/users')
+		.then(function (res) {
+			observer.next(res.body);
+			observer.complete();
+		});
+	});
+
+todos$.subscribe(
+	function (data) {
+		console.log(data); // Is this what you wanted?
+	},
+	function (err) {
+		console.log(err);
+	},
+	function () {
+		console.log('I have completed.');
+	}
+);
