@@ -11,7 +11,7 @@ var Rx = require('rxjs');
  *
  * 1. Call the same user collection endpoint as before
  * 2. Iterate over the `response.body` and emit each user separately
- * 3. Using `.filter` in our pipeline, find the above user in the collection
+ * 3. Using `.find` in our pipeline, find the above user in the collection
  * 4. Using `mergeMap`, we are going to make an additional call to grab
  *    the address for the above user.
  * 5. Within this `mergeMap` create a new observable that handles another
