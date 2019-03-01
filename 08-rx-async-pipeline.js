@@ -17,3 +17,32 @@ var Rx = require('rxjs');
  *
  * Try again!
  */
+
+var asyncTask$ = Rx.Observable.create(function (observer) {
+	request
+		.get('https://jsonplaceholder.typicode.com/users')
+		.then(function (res) {
+			res.body.forEach(function (user) {
+				observer.next(user);
+			});
+			observer.complete();
+		});
+	})
+	.map(function (user) {
+		var copy = Object.assign({}, user);
+		delete copy.address;
+		delete copy.company;
+		return copy;
+	});
+
+ asyncTask$.subscribe(
+	function (data) {
+		console.log(JSON.stringify(data, null, 4));
+	},
+	function (err) {
+		console.log(err);
+	},
+	function () {
+		console.log('I have completed.');
+	}
+);

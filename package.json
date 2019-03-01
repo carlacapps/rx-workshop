@@ -3,11 +3,8 @@
   "version": "1.0.0",
   "description": "A workshop with code work to teach Rx.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "justin@cix.io",
-  "license": "MIT",
-  "scripts": {
+    "10": "node ./10-rx-exported-functions.js",
+    "11": "node ./11-rx-user-testing.js",
     "00": "node ./00-hello-world.js",
     "01": "node ./01-basic-array.js",
     "02": "node ./02-rx-conversion.js",
@@ -17,12 +14,13 @@
     "06": "node ./06-rx-async.js",
     "07": "node ./07-rx-async-improved.js",
     "08": "node ./08-rx-async-pipeline.js",
-    "09": "node ./09-rx-flatten-observables.js",
-    "10": "node ./10-rx-exported-functions.js",
-    "11": "node ./11-rx-user-testing.js"
+    "09": "node ./09-rx-flatten-observables.js"
   },
+  "author": "justin@cix.io",
+  "license": "MIT",
   "dependencies": {
     "rxjs": "^5.4.2",
-    "superagent": "^4.1.0"
+    "superagent": "^4.1.0",
+    "tape": "^4.10.1"
   }
 }

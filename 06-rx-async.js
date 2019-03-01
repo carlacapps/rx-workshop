@@ -13,3 +13,19 @@ var Rx = require('rxjs');
  *
  * Is that what you wanted?
  */
+
+ var asyncTask$ = Rx.Observable.fromPromise(
+	request.get('https://jsonplaceholder.typicode.com/users')
+ );
+
+ asyncTask$.subscribe(
+	function (data) {
+		console.log(data.body);
+	},
+	function (err) {
+		console.log(err);
+	},
+	function () {
+		console.log('I have completed.');
+	}
+);
