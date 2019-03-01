@@ -20,7 +20,7 @@ var Rx = require('rxjs');
  * 2. Console log the output
  *
  * It should be:
- * {
+ {
     "street": "Norberto Crossing",
     "suite": "Apt. 950",
     "city": "South Christy",
@@ -29,4 +29,7 @@ var Rx = require('rxjs');
       "lat": "-71.4197",
       "lng": "71.7478"
     }
+ }
+ * Hint: In the `mergeMap`, you'll need to use a function that returns an observable
+ * in order to pass the ID to the GET request.
  */
